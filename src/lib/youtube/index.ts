@@ -12,11 +12,6 @@ export interface ListMostPopularVideosResponse {
             viewCount: string,
         }
     }>;
-    // pageInfo: {
-    //     totalResults: number;
-    //     resultsPerPage: number;
-    // },
-
 }
 
 export interface Video {
@@ -37,13 +32,6 @@ export type Rating =  'like' | 'dislike' | 'none' | 'unspecified'
 export interface GetRatingResult {
     items: Array<{ videoId: string, rating: Rating }>;
 }
-
-
-// curl \
-//   "https://youtube.googleapis.com/youtube/v3/videos?maxResults=30&part=contentDetails%2Cid%2Cplayer%2Csnippet%2Cstatistics%2Cstatus%2CtopicDetails&videoCategoryId=10&chart=mostPopular&regionCode=pl&key=${KEY}" \
-//   --header "Authorization: Bearer ${TOKEN}" \
-//   --header 'Accept: application/json' \
-//   --compressed
 
 export interface YouTubeProps {
     token: string;
@@ -109,10 +97,3 @@ export class YouTube {
         return response.json();
     }
 }
-
-
-// curl \
-//   'https://youtube.googleapis.com/youtube/v3/videos/getRating?id=26dfFM2FDR8%2CJ9bniJsyb1E&key=369453766252-jktags0v36ha027d1is83tjagm690t48.apps.googleusercontent.com' \
-//   --header 'Authorization: Bearer ya29.a0ARrdaM9hVizLl2DhzA9BcmWfKnQkbiy_GB1mf8Wh7xZB7Sfx7gt8zKWTJ2sVi5oCqybcNUpJl96hTRn4pPFLfz1KZssmZSgLW3PbTrso5OXSdEePlz32dGcvNvjpt8R6uFN1_xeNV31v5bVIFE54AvJaJCUJ' \
-//   --header 'Accept: application/json' \
-//   --compressed
