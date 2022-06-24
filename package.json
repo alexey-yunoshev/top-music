@@ -5,12 +5,13 @@
   "source": "src/index.html",
   "scripts": {
     "start": "dotenv -e ./env/.env.local -- parcel",
-    "build": "dotenv -e ./env/.env.prod -- parcel build --public-url https://alexey-yunoshev.github.io/incontext"
+    "build": "dotenv -e ./env/.env.prod -- parcel build --public-url https://alexey-yunoshev.github.io/top-music"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/google.accounts": "^0.0.2",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "assert": "^2.0.0",
@@ -32,7 +33,6 @@
     "util": "^0.12.4"
   },
   "dependencies": {
-    "@types/google.accounts": "^0.0.2",
     "classnames": "^2.3.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
